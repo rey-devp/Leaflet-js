@@ -1,14 +1,14 @@
-// Inisialisasi peta (koordinat Bandung)
-const map = L.map("map").setView([-6.914744, 107.60981], 13);
+// inisialisasi peta
+var map = L.map("map").setView([-6.8743902175547085, 107.57576416732226], 13);
 
 // Tambahkan tile layer dari OpenStreetMap
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
-    '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
 // Tambahkan marker
-L.marker([-6.914744, 107.60981])
+L.marker([-6.8743902175547085, 107.57576416732226])
   .addTo(map)
-  .bindPopup("Ini adalah Marker")
+  .bindPopup("Custom Marker")
   .openPopup();
